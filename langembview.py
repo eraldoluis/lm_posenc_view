@@ -1,5 +1,4 @@
 from transformers import AutoModel
-import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -42,13 +41,13 @@ def load_wpe_bert():
     return bert.embeddings.position_embeddings.weight.detach().numpy()
 
 
-# wpe_gpt = load_wpe_gpt()
+wpe_gpt = load_wpe_gpt()
 wpe_bert = load_wpe_bert()
 
 '# Shapes'
 
-# '## GPT-2'
-# wpe_gpt.shape
+'## GPT-2'
+wpe_gpt.shape
 
 '## BERT'
 wpe_bert.shape
